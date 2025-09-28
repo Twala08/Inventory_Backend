@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  ims-postgres:
+    image: postgres:14
+    container_name: ims-postgres
+    environment:
+      POSTGRES_USER: ims_user
+      POSTGRES_PASSWORD: ims_pass
+      POSTGRES_DB: ims_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
