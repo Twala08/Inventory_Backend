@@ -11,7 +11,7 @@ CORS(app)
 db.init_app(app)
 migrate = Migrate(app, db)
 
-# --- CRUD Routes ---
+#CRUD Routes
 
 @app.route("/api/products", methods=["POST"])
 def create_product():
